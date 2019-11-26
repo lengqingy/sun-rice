@@ -1,0 +1,70 @@
+.sun-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  font-size: 16px;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 4px;
+  background-color: $white;
+  transform: translate3d(-50%, -50%, 0);
+
+  .sun-dialog-header {
+    padding: 15px 0 0;
+    text-align: center;
+
+    .sun-dialog-header-isolated {
+      padding: 25px 0;
+    }
+  }
+
+  .sun-dialog-message {
+    line-height: 1.5;
+    padding: 15px 20px;
+
+    .sun-dialog-message-has-title {
+      color: $gray-dark;
+      font-size: 14px;
+    }
+  }
+
+  .sun-dialog-footer {
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .sun-dialog-buttons {
+    display: flex;
+
+    .sun-button {
+      flex: 1;
+    }
+  }
+
+  .sun-dialog-cancel {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .sun-dialog-confirm {
+    &,
+    &:active {
+      color: #2c88ff;
+    }
+  }
+
+  .sun-button {
+    border: 0;
+  }
+
+  .sun-dialog-bounce-enter {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(0.7);
+  }
+
+  .sun-dialog-bounce-leave-active {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(0.9);
+  }
+}

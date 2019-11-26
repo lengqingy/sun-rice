@@ -1,0 +1,55 @@
+.sun-submit-bar {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+  user-select: none;
+
+  .sun-submit-bar-tip {
+    color: $orange;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    background-color: #fff7cc;
+  }
+
+  .sun-submit-bar-bar {
+    height: 45px;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    background-color: $white;
+  }
+
+  .sun-submit-bar-price {
+    flex: 1;
+    text-align: right;
+    color: $gray-darker;
+    padding-right: 12px;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .sun-submit-bar-price-integer {
+    color: $red;
+  }
+
+  .sun-submit-bar-price-decimal {
+    color: $red;
+    font-size: 12px;
+  }
+
+  .sun-button {
+    width: 110px;
+    height: 100%;
+    border-radius: 0;
+    font-size: 16px;
+
+    &.sun-button-disabled {
+      border: none;
+    }
+  }
+}

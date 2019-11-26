@@ -1,0 +1,175 @@
+.sun-button {
+  position: relative;
+  padding: 0;
+  display: inline-block;
+  height: 44px;
+  line-height: 42px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+  &::before {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    border: inherit;
+    border-color: $black;
+    background-color: $black;
+    border-radius: inherit; /* inherit parent's border radius */
+    transform: translate(-50%, -50%);
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+
+  .sun-button-des {
+    /* display: inline-block;
+        vertical-align: middle; */
+  }
+
+  &.sun-button-unclickable {
+    &::before {
+      display: none;
+    }
+  }
+
+  &.sun-button-default {
+    color: $button-default-color;
+    background-color: $button-default-background-color;
+    border: 1px solid $button-default-border-color;
+    &.plain {
+      color: $button-default-color;
+      background-color: transparent;
+      border: 1px solid $button-default-color;
+    }
+  }
+
+  &.sun-button-primary {
+    color: $button-primary-color;
+    background-color: $button-primary-background-color;
+    border: 1px solid $button-primary-border-color;
+    &.plain {
+      color: $button-primary-border-color;
+      background-color: transparent;
+      border: 1px solid $button-primary-border-color;
+    }
+  }
+
+  &.sun-button-danger {
+    color: $button-danger-color;
+    background-color: $button-danger-background-color;
+    border: 1px solid $button-danger-border-color;
+    &.plain {
+      color: $button-danger-border-color;
+      background-color: transparent;
+      border: 1px solid $button-danger-border-color;
+    }
+  }
+
+  &.sun-button-light {
+    color: $button-primary-background-color;
+    background-color: $button-primary-background-light-color;
+    border: 1px solid $button-primary-border-light-color;
+  }
+
+  &.sun-button-text {
+    border-color: transparent;
+    color: $button-primary-background-color;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    &.disabled {
+      opacity: 1;
+      colol: $button-default-color;
+    }
+  }
+
+  &.sun-button-checked {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAMAAABmmnOVAAAAY1BMVEUAAAAsif8zk/8tif8sif8sif8tif8sif8sif8ti/8vjf8wjf8sif8siv8tif8uiv8siP/////3+/83j/9Zof/r8//V6P++2v9Flv+cx/+Euv9rrP/K4f+v0v/g7f+PwP93sv9vESAiAAAAEHRSTlMA7Qx2t99gq5gyIRfQTYY+2rp9/gAAA4RJREFUeNrMmdtu6yAQRQfnfnG7wXcnJ8n/f+WprKqjjOoCsmC8HlGULMFmGAgZZMTstseyIJLskJ3DXnpcoYDZvGtsoYLZEzEHKHG9sMQRWpjTCiSAnyXZQA222EOTE018QhNzniTOUOU6SRTQg2NhoIopuG7rsVErmXIqPqDMXr1QADgQ0QnaFPp7FCi5t9LjyG2NHls+R/XYEVEJZQwRXaANrSGZayjcUO/wJok11Mw1tBQgWkG5yt32V0Pjul4MUt5Q9K394i5GKWso6sZOiOGsd8GXsxNOjNNEiRwM9psR71C2y0fV2W8GCLI9lfQtO0hyXYvrZt5hkshwnI/uDwdkebriSNonfoEyrEfVCQcJUfL90T+s2JuS9K94tfM5sESJNIxeB5ZIdX4M1uvAEmlu59WdHV6YhSXO8LAoku6GeVK+ct9cmAOIkkVztIEOSPfXx78wBymxwXI4koEOUqIwWAwfmuxQwwMRJdilNxfuICUuAV//vMHL00Y5gN44hqSt7f0fkg5+ifCC9QoIWtXGOoCipqLl9igkkrapEQJFTcXPD9x7TyRjHEBRU9H5vn+wlmnYNE7iEtqg2OdMHxfvAJJ8eJLJdNXM1UI6xEsUJtiiqUUkhUOkRMQJMlrGjeK2yzx6LJGga5CFXJLBCodlEp+IsHjUHEnhsEiCDt6jQS5J3b45tBXiJeIqlpz65n+z9bYaOwxDYXj5lJOdROxNGSiZ93/NZujFuqtxxVT6n+CDKLIunpI0aBFIYwpGgx6BplDQoESs0uvZM+gROH6ruGhQI2IZVNCgRrBTuj06BhWCf8io4iFMg2BZuj06Bj2iFul2KQ1EKMbi/6UzEKEZC57WT2EKxNBYUKE1EDG+LajQGogYXt9UPP99fIoq/FySvwidZlGnR8Qs7w9dRRNFCkRncxogsAXRpkdgfbcCbOAVsUBgF3V6BCZ5Z2B2qxMeFADsvwiY3XRioDMIs0Fwa9kisBVhVgjUJswAwfvCHIE4O0AAyQMCa3GAQMwOEEDygMBZHCBQswMEkDwgcBYHCMTDAQJYmwMEkDwgsM0OEMDZHCCAFBwgEA8HCKAuDhDAtjhAvBgOEEA9gj0CiKnYI+727AABbEewR9ztswMEEKdsj7irU7ZH3MV9CeaIV2vKwRzxDZmLOeJV3VMuhggW1+mYW7BE0LKdU1qWObcSvgA3YkbGZXpwBAAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 14px, 14px;
+    border: 1px solid $button-primary-border-color;
+    color: $button-primary-border-color;
+  }
+
+  &.sun-button-large {
+    width: 100%;
+    height: 50px;
+    line-height: 48px;
+  }
+
+  &.sun-button-normal {
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  &.sun-button-small {
+    height: 28px;
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  &.sun-button-full {
+    width: 100%;
+    font-size: 15px;
+    height: 32px;
+    line-height: 32px;
+  }
+
+  &.sun-button-loading {
+    .sun-button-loading-loading {
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    /* .text { */
+    /* display: none;
+        } */
+  }
+
+  /* mini图标默认宽度50px，文字不能超过4个 */
+  &.sun-button-mini {
+    display: inline-block;
+    width: 50px;
+    height: 22px;
+    line-height: 20px;
+    font-size: 10px;
+
+    /* & + .mini {
+          margin-left: 5px;
+        } */
+  }
+
+  &.sun-button-block {
+    width: 100%;
+    display: block;
+  }
+
+  &.sun-button-bottom-action {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border: 0;
+    border-radius: 0;
+    font-size: 16px;
+    color: $button-bottom-action-default-color;
+    background-color: $button-bottom-action-default-background-color;
+
+    .sun-button-bottom-action-primary {
+      background-color: $button-bottom-action-primary-background-color;
+    }
+  }
+
+  &.sun-button-disabled {
+    opacity: 0.3;
+  }
+}

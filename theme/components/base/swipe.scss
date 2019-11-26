@@ -1,0 +1,53 @@
+$sun-swipe-indicator: 6px;
+
+.sun-swipe {
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+
+  .sun-swipe-track {
+    height: 100%;
+  }
+
+  .sun-swipe-item {
+    float: left;
+    height: 100%;
+  }
+
+  .sun-swipe-indicators {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+  }
+  .sun-swipe-vertical {
+    left: 10px;
+    top: 50%;
+    bottom: auto;
+    flex-direction: column;
+    transform: translateY(-50%);
+
+    .sun-swipe-indicator:not(:last-child) {
+      margin-bottom: $sun-swipe-indicator;
+    }
+  }
+
+  .sun-swipe-indicator {
+    border-radius: 100%;
+    background-color: $gray-dark;
+    width: $sun-swipe-indicator;
+    height: $sun-swipe-indicator;
+
+    &:not(:last-child) {
+      margin-right: $sun-swipe-indicator;
+      &.sun-swipe-vertical {
+        margin-bottom: $sun-swipe-indicator;
+      }
+    }
+  }
+
+  .sun-swipe-active {
+    background-color: $orange;
+  }
+}

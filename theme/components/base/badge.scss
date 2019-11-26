@@ -1,0 +1,39 @@
+.sun-badge {
+  color: $white;
+  text-align: center;
+  display: inline-block;
+
+  &.sun-badge-type-success {
+    background-color: $green;
+  }
+
+  &.sun-badge-type-primary {
+    background-color: $blue;
+  }
+
+  &.sun-badge-type-error {
+    background-color: $red;
+  }
+
+  &.sun-badge-type-warning {
+    background-color: $orange;
+  }
+
+  &.sun-badge-size-normal {
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 2px 8px;
+  }
+
+  &.sun-badge-size-small {
+    border-radius: 12px;
+    font-size: 12px;
+    padding: 2px 6px;
+  }
+
+  &.sun-badge-size-large {
+    border-radius: 18px;
+    font-size: 18px;
+    padding: 2px 10px;
+  }
+}

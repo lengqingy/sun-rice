@@ -1,0 +1,120 @@
+.sun-field {
+  width: 100%;
+  &:last-child {
+    .sun-cell {
+      background-image: none;
+    }
+  }
+
+  .sun-field-cell {
+    .sun-cell-value {
+      flex: 1;
+    }
+
+    .sun-field-cell-title {
+      max-width: 100px;
+      min-width: 60px;
+    }
+
+    &.error {
+      .sun-field-cell-body-control {
+        &,
+        &::placeholder {
+          color: $red;
+        }
+      }
+    }
+
+    &.disabled {
+      .sun-field-cell-body-control {
+        color: $gray-dark;
+      }
+    }
+
+    &.min-height {
+      .sun-field-cell-body-control {
+        min-height: 60px;
+      }
+    }
+
+    .sun-field-cell-body {
+      display: flex;
+      align-items: center;
+
+      .sun-field-cell-body-control {
+        outline: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+        line-height: 24px;
+        width: 100%;
+        resize: none;
+        display: block;
+        box-sizing: border-box;
+        background-color: transparent;
+        font-size: 14px;
+
+        &:disabled {
+          opacity: 1;
+          color: $gray-darker;
+          background-color: transparent;
+        }
+
+        &.center {
+          text-align: center;
+        }
+
+        &.right {
+          text-align: right;
+        }
+
+        &::-webkit-input-placeholder {
+          color: $placeholder-color;
+        }
+      }
+
+      .sun-field-cell-body-clear,
+      .sun-field-cell-body-icon,
+      .sun-field-cell-body-button {
+        flex-shrink: 0;
+      }
+
+      .sun-field-cell-body-clear,
+      .sun-field-cell-body-icon {
+        width: 16px;
+        height: 16px;
+        padding: 0 10px;
+        color: $gray-dark;
+        line-height: inherit;
+        margin-right: -10px;
+      }
+
+      .sun-field-cell-body-icon {
+        display: block;
+        font-size: 16px;
+        line-height: inherit;
+      }
+
+      .sun-field-cell-body-button {
+        padding-left: 10px;
+        display: flex;
+        .sun-button-text {
+          padding: 0;
+        }
+      }
+    }
+
+    .sun-field-cell-error-message {
+      color: $red;
+      font-size: 12px;
+      text-align: left;
+      &.center {
+        text-align: center;
+      }
+
+      &.right {
+        text-align: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import './border.scss';
+@import './animate.scss';
+
+* {
+  font-family: San Francisco, PingFangSC-Light, sans-serif;
+}
+/* color variables */
+$black: #000 !default;
+$white: #fff !default;
+$red: #f44 !default;
+$blue: #2c88ff !default;
+$blue-light: #8fbdfa !default;
+$orange: #f60 !default;
+$green: #06bf04 !default;
+$gray: #c9c9c9 !default;
+$gray-light: #e5e5e5 !default;
+$gray-darker: #666 !default;
+$gray-dark: #999 !default;
+
+/* default colors */
+$text-color: #080808 !default;
+$border-color: #eee !default;
+$active-color: #e8e8e8 !default;
+$background-color: #f8f8f8 !default;
+$placeholder-color: #ccc !default;
+
+/* button */
+$button-default-color: #484848 !default;
+$button-primary-background-light-color: #e2edfd !default;
+$button-primary-border-light-color: #e2edfd !default;
+
+/* loading */
+$loading-default-light-color: #69a0e0 !default;
+
+/* button */
+
+$button-default-background-color: $white !default;
+$button-default-border-color: $border-color !default;
+$button-primary-color: $white !default;
+$button-primary-background-color: $blue !default;
+$button-primary-border-color: $blue !default;
+$button-danger-color: $white !default;
+$button-danger-background-color: $red !default;
+$button-danger-border-color: $red !default;
+$button-disabled-color: $gray-dark !default;
+$button-disabled-background-color: $border-color !default;
+$button-disabled-border-color: $gray-light !default;
+$button-bottom-action-default-color: $white !default;
+$button-bottom-action-default-background-color: $blue !default;
+$button-bottom-action-primary-color: $white !default;
+$button-bottom-action-primary-background-color: $red !default;
+
+/* loading */
+$loading-default-color: $blue !default;

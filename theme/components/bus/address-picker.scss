@@ -1,0 +1,12 @@
+.sun-address-picker-cell {
+  position: relative;
+  width: 100%;
+  &:last-child {
+    .sun-cell {
+      background-image: none;
+    }
+  }
+  .sun-address-picker-cell-placeholder {
+    color: $placeholder-color;
+  }
+}

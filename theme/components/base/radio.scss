@@ -1,0 +1,60 @@
+.sun-radiolist-label {
+  display: block;
+  padding: 0 10px;
+}
+
+.sun-radio {
+  &.right {
+    float: right;
+  }
+
+  .sun-radio-input {
+    display: none;
+
+    &:checked {
+      + .sun-radio-core {
+        background-color: $blue;
+        border-color: $blue;
+
+        &::after {
+          background-color: $white;
+          transform: scale(1);
+        }
+      }
+    }
+
+    &[disabled] + .sun-radio-core {
+      background-color: $gray;
+      border-color: #ccc;
+    }
+  }
+
+  .sun-radio-core {
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: $white;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+
+    &::after {
+      content: ' ';
+      border-radius: 100%;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 8px;
+      height: 8px;
+      background-color: $white;
+      transition: transform 0.2s;
+      transform: scale(0);
+    }
+  }
+}
+
+.sun-radio-label {
+  margin-left: 6px;
+}

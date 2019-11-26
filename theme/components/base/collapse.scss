@@ -1,0 +1,27 @@
+.sun-collapse {
+  width: 100%;
+}
+
+.sun-collapse-item {
+  .sun-cell {
+    background-position: 0 100% !important;
+    &.no-bottom-border {
+      background-image: none;
+    }
+  }
+  .sun-collapse-item-title {
+    &.right-icon::before {
+      transition: 0.3s;
+      transform: rotate(90deg);
+    }
+    &::after {
+      visibility: hidden;
+    }
+  }
+
+  .sun-collapse-item-wrapper {
+    overflow: hidden;
+    will-change: height;
+    transition: height 0.3s ease-in-out;
+  }
+}

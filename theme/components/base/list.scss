@@ -1,0 +1,22 @@
+.sun-list {
+  .sun-list-loading {
+    text-align: center;
+
+    .sun-list-loading-spinner,
+    .sun-list-loading-text {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .sun-list-loading-spinner {
+      width: 16px;
+      height: 16px;
+    }
+
+    .sun-list-loading-text {
+      font-size: 13px;
+      color: $gray-dark;
+      line-height: 50px;
+    }
+  }
+}

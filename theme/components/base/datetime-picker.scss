@@ -1,0 +1,13 @@
+.sun-picker-cell {
+  position: relative;
+  width: 100%;
+  &:last-child {
+    .sun-cell {
+      background-image: none;
+    }
+  }
+
+  .sun-picker-cell-placeholder {
+    color: $placeholder-color;
+  }
+}

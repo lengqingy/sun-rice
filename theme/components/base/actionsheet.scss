@@ -1,0 +1,64 @@
+.sun-actionsheet {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: $text-color;
+    max-height: 90%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: $background-color;
+    &.sun-actionsheet-title {
+      background-color: $white;
+    }
+  
+    .sun-actionsheet-item,
+    .sun-actionsheet-cancel {
+      height: 50px;
+      line-height: 50px;
+      font-size: 16px;
+      text-align: center;
+      background-color: $white;
+      display: flex;
+      justify-content: center;
+  
+      &:active {
+        background-color: $active-color;
+      }
+    }
+    .sun-actionsheet-cancel {
+      margin-top: 10px;
+    }
+  
+    .sun-actionsheet-disabled {
+      color: $gray;
+  
+      &:active {
+        background-color: $white;
+      }
+    }
+  
+    .sun-actionsheet-subname {
+      font-size: 12px;
+      color: $gray-darker;
+      margin-left: 5px;
+    }
+  
+    .sun-actionsheet-loading {
+      display: inline-block;
+      align-self: center;
+    }
+    .sun-actionsheet-header {
+      font-size: 16px;
+      line-height: 44px;
+      text-align: center;
+      .sun-actionsheet-header-close {
+        position: absolute;
+        top: 13px;
+        right: 0;
+        padding: 0 15px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }

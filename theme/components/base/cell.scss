@@ -1,0 +1,90 @@
+.sun-cell {
+  width: 100%;
+  display: flex;
+  padding: 13px 15px;
+  box-sizing: border-box;
+  line-height: 24px;
+  position: relative;
+  background-color: $white;
+  color: $text-color;
+  font-size: 14px;
+  overflow: hidden;
+
+  .sun-sell-group {
+    width: 100%;
+  }
+
+  &:not(:last-child) {
+    background-image: linear-gradient(
+      0deg,
+      $gray-light,
+      $gray-light 50%,
+      transparent 50%
+    );
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: 15px 100%;
+  }
+  &.clickable {
+    &:active {
+      background-color: $active-color;
+    }
+  }
+  &.required {
+    &::before {
+      content: '*';
+      position: absolute;
+      left: 7px;
+      font-size: 14px;
+      color: $red;
+    }
+  }
+  .sun-cell-left-icon {
+    width: 16px;
+    height: 16px;
+    margin: auto 5px auto 0;
+  }
+  .sun-cell-title {
+    flex: 1;
+    align-self: center;
+    text-align: left;
+    .sun-cell-title-label {
+      font-size: 12px;
+      line-height: 1.2;
+      color: $gray-darker;
+    }
+  }
+  .sun-cell-value {
+    flex: 1;
+    align-self: center;
+    overflow: hidden;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &.alone {
+      text-align: left;
+    }
+  }
+  .sun-cell-right-icon {
+    align-self: center;
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    &.left {
+      transform: rotate(180deg);
+      width: 12px;
+      height: 12px;
+    }
+    &.up {
+      transform: rotate(-90deg);
+      width: 12px;
+      height: 12px;
+    }
+    &.down {
+      transform: rotate(90deg);
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

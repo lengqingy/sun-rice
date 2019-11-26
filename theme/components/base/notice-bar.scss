@@ -1,0 +1,62 @@
+.sun-noticebar {
+  width: 100%;
+  display: flex;
+  color: $orange;
+  padding: 9px 15px;
+  font-size: 12px;
+  line-height: 1.5;
+  position: relative;
+  background-color: #fff7cc;
+
+  .sun-noticebar-withicon {
+    position: relative;
+    padding-right: 30px;
+  }
+
+  .sun-noticebar-leftIcon {
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  .sun-noticebar-rightIcon {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+  }
+
+  .sun-noticebar-wrap {
+    flex: 1;
+    height: 18px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .sun-noticebar-content {
+    position: absolute;
+    white-space: nowrap;
+  }
+
+  .sun-noticebar-play {
+    animation: sun-noticebar-play linear both;
+  }
+
+  .sun-noticebar-playInfinite {
+    animation: sun-noticebar-play-infinite linear infinite both;
+  }
+}
+
+@keyframes sun-noticebar-play {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes sun-noticebar-play-infinite {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

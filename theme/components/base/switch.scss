@@ -1,0 +1,69 @@
+.sun-switch {
+  height: 1em;
+  width: 1.6em;
+  position: relative;
+  background: $white;
+  box-sizing: content-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+
+  .sun-switch-node {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 1em;
+    height: 1em;
+    transition: 0.3s;
+    position: absolute;
+    border-radius: 100%;
+    background-color: $white;
+    box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1),
+      0 3px 3px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .sun-switch-loading {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+  }
+
+  .sun-switch-text {
+    display: table;
+    width: 100%;
+    height: 100%;
+    font-size: 0.5em;
+    text-align: center;
+
+    span {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  &.on {
+    background-color: $blue;
+
+    .sun-switch-node {
+      transform: translateX(0.6em);
+    }
+  }
+
+  &.disabled {
+    opacity: 0.4;
+  }
+}
+
+.sun-switch-cell {
+  .sun-switch {
+    position: absolute;
+    right: 15px;
+    top: 11px;
+  }
+}
+
+.sun-switch-des {
+  position: absolute;
+  right: 70px;
+}

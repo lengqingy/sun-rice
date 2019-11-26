@@ -1,0 +1,111 @@
+.sun-career-picker {
+  position: relative;
+  width: 100%;
+  &:last-child {
+    .sun-cell {
+      background-image: none;
+    }
+  }
+}
+.sun-career-picker-placeholder {
+  color: $placeholder-color;
+}
+
+.sun-actionsheet-content {
+  background: $white;
+}
+
+.sun-career-picker-toolbar {
+  display: flex;
+  height: 50px;
+  line-height: 50px;
+  justify-content: space-between;
+}
+
+.sun-career-picker-cancel,
+.sun-career-picker-confirm {
+  color: $blue;
+  padding: 0 15px;
+  font-size: 14px;
+
+  &:active {
+    background-color: $active-color;
+  }
+}
+
+.sun-career-picker-disabled {
+  opacity: 0.5;
+}
+
+.sun-career-picker-title {
+  max-width: 50%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.sun-career-picker-list {
+  height: 290px;
+  padding: 5px 0;
+  overflow-y: scroll;
+  .sun-career-picker-list-item {
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    padding: 0 35px 0 12px;
+    position: relative;
+    .sun-ellipsis {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .sun-career-picker-list-active {
+    color: $blue;
+    .sun-career-picker-list-icon {
+      width: 15px;
+      height: 11px;
+      position: absolute;
+      right: 12px;
+      top: 12px;
+    }
+  }
+}
+.sun-career-picker-steps {
+  padding: 12px;
+  background-color: $background-color;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+.sun-career-picker-step {
+  line-height: 28px;
+  position: relative;
+  .sun-career-picker-step-text {
+    margin-left: 15px;
+  }
+  .sun-career-picker-step-active {
+    color: $blue;
+  }
+  .sun-career-picker-step-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid $blue;
+    position: absolute;
+    left: 0;
+    top: 8px;
+  }
+  .sun-career-picker-step-finish {
+    background-color: $blue;
+  }
+  .sun-career-picker-step-line {
+    position: absolute;
+    left: 4px;
+    top: 12px;
+    width: 1px;
+    height: calc(100% - 4px);
+    background-color: $blue;
+  }
+}

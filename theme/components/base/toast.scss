@@ -1,0 +1,52 @@
+.sun-toast {
+  position: fixed;
+  max-width: 80%;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 1000;
+  transition: opacity 0.3s linear;
+
+  .sun-toast-icon {
+    width: 56px;
+    height: 56px;
+    display: block;
+    text-align: center;
+  }
+
+  .sun-toast-loading {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .sun-toast-text {
+    color: $white;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+  }
+
+  .sun-toast-pop-enter,
+  .sun-toast-pop-leave-active {
+    opacity: 0;
+  }
+
+  &.sun-toast-placetop {
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &.sun-toast-placemiddle {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.sun-toast-placebottom {
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}

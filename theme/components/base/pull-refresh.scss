@@ -1,0 +1,38 @@
+.sun-pull-refresh {
+  user-select: none;
+  overflow: hidden;
+
+  .sun-pull-refresh-track {
+    position: relative;
+  }
+
+  .sun-pull-refresh-head {
+    width: 100%;
+    height: 50px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: -50px;
+    font-size: 14px;
+    color: $gray-dark;
+    line-height: 50px;
+  }
+  .sun-pull-refresh-loading {
+    .sun-loading {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+
+    span,
+    .sun-loading {
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+
+  .sun-pull-refresh-text {
+    display: block;
+  }
+}
