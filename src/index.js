@@ -2,8 +2,8 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-09-20 17:53:20
- * @LastEditTime: 2019-09-20 17:53:20
- * @LastEditors: your name
+ * @LastEditTime: 2019-12-01 21:56:34
+ * @LastEditors: Please set LastEditors
  */
 // 引入css
 import '../theme/components/index.scss'
@@ -41,9 +41,6 @@ import SunUploader from './components/base/uploader'
 
 // 业务组件
 import { SunAddressPicker, SunAddressPickerCell } from './components/bus/address-picker'
-import SunIdcardPicker from './components/bus/idcard-picker'
-import SunSubmitBar from './components/bus/submit-bar'
-import SuncareerPicker from './components/bus/career-picker'
 
 // 高级组件
 import SunLazyload from './components/advance/lazyload'
@@ -90,9 +87,6 @@ const install = function(Vue, config = {}) {
   // 业务组件
   Vue.component(SunAddressPicker.name, SunAddressPicker)
   Vue.component(SunAddressPickerCell.name, SunAddressPickerCell)
-  Vue.component(SunIdcardPicker.name, SunIdcardPicker)
-  Vue.component(SunSubmitBar.name, SunSubmitBar)
-  Vue.component(SuncareerPicker.name, SuncareerPicker)
   // 高级组件
   Vue.use(SunLazyload)
   // 全局组件
@@ -154,9 +148,6 @@ export default {
   // 业务组件
   SunAddressPicker,
   SunAddressPickerCell,
-  SunIdcardPicker,
-  SunSubmitBar,
-  SuncareerPicker,
   // 高级组件
   SunLazyload
 }

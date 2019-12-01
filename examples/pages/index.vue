@@ -54,9 +54,6 @@
     <s-cell title="业务组件" clickable :arrowDirection="busDirection" @click="onTelescoping('busDirection')" />
     <div v-if="busDirection=='down'" class="items">
       <s-cell title="AddressPicker" value="地址选择器" clickable @click="() => this.$router.push({ name: 'AddressPicker' })" />
-      <s-cell title="SubmitBar" value="提交订单" clickable @click="() => this.$router.push({ name: 'SubmitBar' })" />
-      <s-cell title="IDcardPicker" value="身份证有效期" clickable @click="() => this.$router.push({ name: 'IdcardPicker' })" />
-      <s-cell title="CareerPicker" value="职业选择器" clickable @click="() => this.$router.push({ name: 'SunCareerPicker' })" />
     </div>
   </div>
 </template>
@@ -66,13 +63,13 @@ export default {
   name: 'demo',
   data() {
     return {
-      baseDirection: 'up',
-      advanceDirection: 'up',
-      busDirection: 'up',
-      dataEntry: 'up',
-      dataExhibition: 'up',
-      operationalFeedback: 'up',
-      senior: 'up'
+      baseDirection: 'down',
+      advanceDirection: 'down',
+      busDirection: 'down',
+      dataEntry: 'down',
+      dataExhibition: 'down',
+      operationalFeedback: 'down',
+      senior: 'down'
     }
   },
   methods: {

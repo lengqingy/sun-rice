@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-11-26 10:47:58
+ * @LastEditTime: 2019-12-01 22:01:05
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /sun-rice/SUMMARY.md
+ -->
 # Summary
 
 - [Introduction](README.md)
@@ -37,8 +45,5 @@
   - [lazyload](./documents/lazyload.md)
 - 业务组件
   - [addressPicker](./documents/address-picker.md)
-  - [submitBar](./documents/submit-bar.md)
-  - [IDcardPicker](./documents/idcard-picker.md)
-  - [careerPicker](./documents/career-picker.md)
 - 贡献
   - [Contribution](./src/documents/CONTRIBUTING_zh-cn.md)

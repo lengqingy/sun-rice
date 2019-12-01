@@ -1,13 +1,15 @@
+/*
+ * @Author: your name
+ * @Date: 2019-11-26 10:47:58
+ * @LastEditTime: 2019-12-01 21:57:43
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /sun-rice/examples/router/bus_router.js
+ */
 'use strict'
 
 const AddressPicker = resolve =>
   require(['../pages/address-picker'], resolve)
-const SubmitBar = resolve =>
-  require(['../pages/submit-bar'], resolve)
-const IDcardPicker = resolve =>
-  require(['../pages/idcard-picker'], resolve)
-const SunCareerPicker = resolve =>
-  require(['../pages/career-picker'], resolve)
 
 const routes = [
   {
@@ -15,24 +17,6 @@ const routes = [
     component: AddressPicker,
     name: 'AddressPicker',
     meta: { title: 'address-picker' }
-  },
-  {
-    path: '/bus/submit-bar',
-    component: SubmitBar,
-    name: 'SubmitBar',
-    meta: { title: 'submit-bar' }
-  },
-  {
-    path: '/bus/idcard-picker',
-    component: IDcardPicker,
-    name: 'IdcardPicker',
-    meta: { title: 'idcard-picker' }
-  },
-  {
-    path: '/bus/career-picker',
-    component: SunCareerPicker,
-    name: 'SunCareerPicker',
-    meta: { title: 'career-picker' }
   }
 ]
 
